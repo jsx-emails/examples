@@ -1,0 +1,9 @@
+{
+  "Welcome {{client_name}}!": "Korean1",
+  "Hello from JSX Email Builder": "Korean2",
+  "{{client_name}}! We're so excited to have you on board. We hope you enjoy your time here.": "Korean3",
+  "My name is {{firstName}}.": "Korean",
+  "Creating email templates never been so easy!": "Korean",
+  "I am a <b>{{occupancy}}</b>._one": "저는 <b>{{occupancy}}</b>입니다 1.",
+  "I am a <b>{{occupancy}}</b>._other": "저는 <b>{{occupancy}}</b>입니다 2."
+}

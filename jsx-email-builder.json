@@ -1,0 +1,76 @@
+{
+  "templates": {
+    "templatesDir": "email-templates",
+    "subjectRequired": true
+  },
+  "translation": {
+    "languages": [
+      {
+        "name": "English",
+        "code": "en",
+        "default": true,
+        "disableTranslations": true
+      },
+      {
+        "name": "Chinese",
+        "code": "zh-cn",
+        "default": false,
+        "disableTranslations": false
+      },
+      {
+        "name": "Korean",
+        "code": "ko",
+        "default": false,
+        "disableTranslations": false
+      }
+    ],
+    "createModuleFiles": true
+  },
+  "plugins": {
+    "excel-transporter": {
+      "export":{
+        "inputFile": "template.xlsx",
+        "outputFile": "texts.xlsx",
+        "exportMap": {
+          "sheet": "Translations",
+          "cellData": [
+            {
+              "headerKey": "ID",
+              "value": "I18N_EMAILS_%rootFolder:constantCase%_%templateName:constantCase%_%hash:printIfNotSubject%%string:printIfSubject:SUBJECT%"
+            },
+            {
+              "headerKey": "English",
+              "value": "%text%"
+            },
+            {
+              "headerKey": "Details",
+              "value": "%rootFolder:sentenceCase% service: %templateName:sentenceCase% email template"
+            }
+          ]
+        }
+      },
+      "import":{
+        "inputFile": "translations.xlsx",
+        "warnOnMissing": true,
+        "importMap":{
+          "sheet": "Translations",
+          "keyColumn": "English",
+          "cellData": [
+            {
+              "headerKey": "English",
+              "languageCode": "en"
+            },
+            {
+              "headerKey": "Chinese traditional",
+              "languageCode": "zh-cn"
+            },
+            {
+              "headerKey": "Korean",
+              "languageCode": "ko"
+            }
+          ]
+        }
+      }     
+    }
+  }
+}

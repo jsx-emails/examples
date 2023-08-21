@@ -1,0 +1,21 @@
+{
+  "name": "jsx-emails-examples",
+  "description": "Example mail templates made by jsx email builder",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "jsx-email-builder start",
+    "build": "jsx-email-builder build",
+    "gen-trans": "jsx-email-builder gen-trans",
+    "export-texts": "excel-transporter export",
+    "import-trans": "excel-transporter import"
+  },
+  "keywords": [
+    "email templates"
+  ],
+  "devDependencies": {
+    "jsx-email-builder": "^1.1.0",
+    "jsx-emails-excel-transporter": "^1.1.0"
+  },
+  "private": true
+}
